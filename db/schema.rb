@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312170152) do
+ActiveRecord::Schema.define(version: 20180313114457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.integer "question_id"
+    t.text "answer"
+    t.string "colour"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.boolean "active"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "match_id"
+    t.string "message"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "question"
+  end
+
+  create_table "user_answers", force: :cascade do |t|
+    t.integer "answer_id"
+    t.integer "user_id"
+  end
+
+  create_table "user_matches", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "match_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
