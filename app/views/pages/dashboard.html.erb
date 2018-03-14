@@ -1,1 +1,8 @@
-<h2>This will be the dashboard page</h2>
+<h2>Hey, your first_name!</h2>
+
+<h3>Your matches</h3>
+
+<% @matches.each do |m|  %>
+  <%= m.users.where.not(id: current_user.id).first.email %>
+  <%= m.last_message %>
+<% end %>
