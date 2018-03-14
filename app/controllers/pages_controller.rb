@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @matches = current_user.matches
+    @questions = Question.all
   end
 
 end
