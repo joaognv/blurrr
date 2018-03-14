@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  def show
+  def index
 
   end
 end

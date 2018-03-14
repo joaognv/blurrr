@@ -1,0 +1,12 @@
+<h1>Your questions</h1>
+
+<% @questions.each do |q| %>
+  <div class="form-box-full-width">
+    <%= simple_form_for q, url: questions_path, method: :post do |f| %>
+        <%= q.question %>
+        <%= f.input :answers, as: :radio_buttons, collection: q.answers, label_method: :answer  %>
+        <%= f.submit "submit" %>
+    <% end %>
+  </div>
+<% end  %>
+
