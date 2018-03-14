@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'pry-byebug'
 
 Profile.delete_all
 User.delete_all
@@ -25,7 +24,7 @@ profile2 = Profile.create(user: user2, username: "Sally", city: "Compton", age: 
 
 
 mutch = Match.create(active: true)
-# binding.pry
+
 mutch.users << [user1, user2]
 mutch.save!
 

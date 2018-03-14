@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Create a profile</h1>
+ <div class="devise-form">
+          <%= simple_form_for(@profile) do |p| %>
+            <%= p.input :username %>
+            <%= p.input :city %>
+            <%= p.input :age %>
+            <%= p.input :preference %>
+            <%= p.input :gender %>
+            <%= p.input :nerdy %>
+            <%= p.input :sporty %>
+            <%= p.input :party %>
+            <%= p.input :organized %>
+            <%= p.input :spiritual %>
+            <%= p.input :photo %>
+            <%= p.input :photo_cache, as: :hidden %>
+            <%= p.button :submit, class:"button-custom" %>
+            <%= link_to 'Back to Dash', dashboard_path %>
+          <% end %>
+        </div>
+</div>
