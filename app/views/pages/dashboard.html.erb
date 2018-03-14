@@ -1,6 +1,6 @@
 <h2>Hey, your first_name!</h2>
 
-<h3>Your matches</h3>
+<h3>Your matches:</h3>
 
 <% @matches.each do |m|  %>
   <%= link_to match_path(m) do  %>
@@ -8,3 +8,8 @@
     <%= m.last_message %>
   <% end %>
 <% end %>
+
+<h3>Your questions:</h3>
+
+<%= link_to "Änswer Questions", questions_path %>
+
