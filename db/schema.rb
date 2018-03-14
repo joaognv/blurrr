@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314112657) do
+ActiveRecord::Schema.define(version: 20180314140934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20180314112657) do
     t.string "preference"
     t.string "gender"
     t.string "chakra_colour"
-    t.string "photo_url"
+    t.string "photo"
     t.integer "nerdy"
     t.integer "sporty"
     t.integer "party"
@@ -75,7 +75,6 @@ ActiveRecord::Schema.define(version: 20180314112657) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
