@@ -8,7 +8,7 @@ class CreateProfiles < ActiveRecord::Migration[5.1]
       t.string :preference
       t.string :gender
       t.string :chakra_colour
-      t.string :photo_url
+      t.string :photo
       t.integer :nerdy
       t.integer :sporty
       t.integer :party
