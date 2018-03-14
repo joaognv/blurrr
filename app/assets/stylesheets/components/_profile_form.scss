@@ -1,0 +1,24 @@
+
+.prof-new-form {
+  background-color: #4901FF;
+  h1 {
+    color: whitesmoke;
+  }
+  .simple_form_for {
+    color: white;
+  }
+  .btn-default {
+  background-color: $green;
+  color: white;
+}
+  input {
+    background-color: transparent;
+    font-size: 14px;
+  }
+  .form-control {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    box-shadow: none;
+  }
+}
