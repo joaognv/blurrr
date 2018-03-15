@@ -1,0 +1,52 @@
+
+
+.chat-page {
+  background: red;
+  min-height: calc(100vh - 70px);
+
+  .chat-header {
+  background: blue;
+  // height: 110px;
+  display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    img {
+      max-width: 80px;
+      max-height: 100px;
+    border-radius: 50%;
+
+    }
+
+  }
+
+
+
+
+  .chat-bubbles {
+  background: yellow;
+  height: 65vh;
+
+
+    .bubble-sender {
+      width: 80%;
+      background: orange;
+    }
+
+    .bubble-receiver {
+      background: grey;
+      width: 80%;
+    }
+  }
+
+
+
+  .chat-inputs {
+  background: grey;
+  height: 110px;
+  }
+
+
+}
+
