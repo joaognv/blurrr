@@ -19,10 +19,6 @@
 
 
 
-
-
-
-
 <h2>Hey, Dickface</h2>
 
 
@@ -31,17 +27,46 @@
 
 
 --------------
+
+
 <h3>Your matches:</h3>
-<% @matches.each do |m|  %>
-  <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
-    <%= m.users.where.not(id: current_user.id).first.email %>
+   <% @matches.each do |m|  %>
+<div class="match-box">
+
+    <div class="av-us">
+     <!-- two things in here, with username above, avaatar picture below -->
+      <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
+
+
+      <%= m.last_message %>
+      <% end %>
+    </div>
+
+
+
+    <div class="lst-message">
+
+
+      <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
+
+      <%= m.last_message %>
+      <% end %>
+    </div>
+
+
+
   <% end %>
-  <%= link_to match_path(m) do  %>
-    <%= m.last_message %>
-  <% end %>
-<% end %>
+
+
+
+</div>
+
+
+<div></div>
 -----------------------
+
 <h3>Your questions:</h3>
 
 <%= link_to "Answer Questions", questions_path %>
 
+m.last_messagepe
