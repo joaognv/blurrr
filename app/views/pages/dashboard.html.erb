@@ -3,13 +3,15 @@
 <h3>Your matches:</h3>
 
 <% @matches.each do |m|  %>
-  <%= link_to match_path(m) do  %>
+  <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
     <%= m.users.where.not(id: current_user.id).first.email %>
+  <% end %>
+  <%= link_to match_path(m) do  %>
     <%= m.last_message %>
   <% end %>
 <% end %>
 
 <h3>Your questions:</h3>
 
-<%= link_to "Änswer Questions", questions_path %>
+<%= link_to "Answer Questions", questions_path %>
 
