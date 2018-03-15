@@ -1,5 +1,5 @@
 function initChat(){
-  const submit = document.querySelector('.send_button');
+  const submit = document.querySelector('.chat-send');
 
   const matchIdInput = document.querySelector("#match_id");
   const matchId = matchIdInput.value;
@@ -9,22 +9,22 @@ function initChat(){
 
   submit.addEventListener('click', function(event){
     event.preventDefault();
-    const chatMessage = document.querySelector('.chat_message');
+    const chatInput = document.querySelector('.chat-input');
 
     // append a new message to the list
-    const messageList = document.querySelector('.messages_list')
-    messageList.insertAdjacentHTML('beforeend', `<div>${chatMessage.value}</div>`);
+    const chatBubbles = document.querySelector('.chat-bubbles')
+    chatBubbles.insertAdjacentHTML('beforeend', `<div class="bubble-right"><div class="chat-bubble"><p>${chatInput.value}</p></div></div>`);
 
     // prepare the data to send before clearing the input
     const data = {
       "message": {
         'match_id': matchId,
         'user_id': userId,
-        "message": chatMessage.value
+        "message": chatInput.value
       }
     };
 
-    chatMessage.value = '';  // this clears the input
+    chatInput.value = '';  // this clears the input
 
     // send a POST request to create the message in the DB
     const url = "http://localhost:3000/messages";
