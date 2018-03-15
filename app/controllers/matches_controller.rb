@@ -12,5 +12,6 @@ class MatchesController < ApplicationController
       user_match.user_id != current_user.id
     end
     @other_user_match = filtered_user_matches.first
+    @other_user = @other_user_match.user
   end
 end

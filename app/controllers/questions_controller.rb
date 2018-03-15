@@ -4,6 +4,6 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
   def show
-    @questions = Question.all
+    # make this go
   end
 end
