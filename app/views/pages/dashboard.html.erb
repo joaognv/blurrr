@@ -1,7 +1,37 @@
-<h2>Hey, your first_name!</h2>
 
+<div class="chat-header-mine">
+        <div class="avatar-large avatar-under-line" style="background-image: url(<%= current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png'; %> );" >
+        </div>
+      </div>
+
+
+
+<div>.</div>
+<div>.</div>
+<div>.</div>
+<div>.</div>
+<div>.</div>
+<div>.</div>
+<div>.</div>
+<div>.</div>
+
+
+
+
+
+
+
+
+
+<h2>Hey, Dickface</h2>
+
+
+
+
+
+
+--------------
 <h3>Your matches:</h3>
-
 <% @matches.each do |m|  %>
   <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
     <%= m.users.where.not(id: current_user.id).first.email %>
@@ -10,7 +40,7 @@
     <%= m.last_message %>
   <% end %>
 <% end %>
-
+-----------------------
 <h3>Your questions:</h3>
 
 <%= link_to "Answer Questions", questions_path %>
