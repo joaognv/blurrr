@@ -1,0 +1,80 @@
+
+.chat-page {
+  background: white;
+  overflow: hidden;
+  min-height: calc(100vh - 70px);
+
+  .chat-header {
+    position: relative;
+    margin-left: -80px;
+    margin-right: -80px;
+    height: 150px;
+    background-image: $brand-gradient;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding-top: 20px;
+  }
+
+  .chat-header p {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+  }
+
+
+
+  .chat-bubbles {
+    background: white;
+    height: 55vh;
+    overflow: scroll;
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+
+  .bubble-right {
+    padding-left: 35px;
+    margin: 15px;
+  }
+  .bubble-right .chat-bubble {
+     border-radius: 10px;
+     background: $brand-gradient;
+     padding:15px;
+     color: white;
+  }
+
+
+  .bubble-left {
+    padding-right: 35px;
+    margin: 15px;
+  }
+ .bubble-left .chat-bubble {
+     border-radius: 10px;
+     background: lightgrey;
+     padding:15px;
+  }
+
+
+
+
+  .chat-inputs {
+    background: lightgrey;
+    height: 110px;
+    padding: 20px;
+  }
+  .chatform {
+    display: flex;
+
+  }
+  .chat-input {
+    width: 80%;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+  }
+  .chat-send {
+    width: 20%;
+  }
+
+
+}
+

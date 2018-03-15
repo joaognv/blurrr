@@ -1,0 +1,48 @@
+.avatar-medium {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: calc(50% - 75px);
+}
+
+.avatar-small {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: calc(50% - 60px);
+}
+.avatar-large {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: calc(50% - 100px);
+}
+
+.avatar-drop-on-line {
+  position: absolute;
+  bottom: -75px;
+}
+
+.avatar-above-line {
+  position: absolute;
+  bottom: -40px;
+}
+
+
+.avatar-under-line {
+  position: absolute;
+  bottom: -90px;
+}
+
