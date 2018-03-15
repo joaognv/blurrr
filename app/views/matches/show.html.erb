@@ -12,39 +12,27 @@
 
 
      <div class="chat-bubbles">
+        <% @messages.each do |message| %>
+            <div class="<%= message.user == current_user ? "bubble-right" : "bubble-left" %>">
+              <div class="chat-bubble">
+                <p>
+                   <%= message.message %>
+                </p>
+              </div>
 
-
-         <div class="bubble-right">
-            <div class="chat-bubble">
-              <p>
-                Hey there you dtf
-              </p>
             </div>
-         </div>
-
-         <div class="bubble-left">
-            <div class="chat-bubble">
-              <p>
-                 dtf
-              </p>
-            </div>
-         </div>
-
-
+          <% end %>
      </div>
-
-
-
 
 
      <div class="chat-inputs">
       <!-- Form -->
-      <div class="chatform">
-        <input type="text" class="chat-input">
-
-        <button class="brand-button-medium btn chat-send fa fa-paper-plane">  </button>
-      </div>
-
-      </div>
-  </div>
+        <div class="chatform">
+          <input type="text" class="chat-input">
+          <input type="hidden" id="match_id" value="<%= @match_id %>" />
+          <input type="hidden" id="user_id" value="<%= @user_id %>" />
+          <button class="brand-button-medium btn chat-send fa fa-paper-plane">  </button>
+        </div>
+     </div>
+</div>
 
