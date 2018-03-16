@@ -1,1 +1,72 @@
 // Specific CSS for your home-page
+.home-page {
+  background: $brand-gradient;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: whitesmoke;
+
+  .welcome {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-left: 12px;
+  }
+
+  .welcome h2 {
+    font-family: 'Marck+Script', cursive;
+    color: whitesmoke;
+  }
+
+  .short-intro1 {
+    height: 80px;
+    margin-right: 15px ;
+    margin-bottom: 35px ;
+    font-family: Mina;
+    padding-left: 5px;
+
+  }
+
+
+
+
+  .short-intro2 {
+    align-item: flex-end;
+    height: 90px;
+    padding-left: 20px;
+    margin-left: 40px;
+    margin-bottom: 100px;
+  }
+
+
+
+  .short-intro2 p {
+
+  }
+
+
+
+
+
+  .get-started {
+    background: $brand-pink;
+    height: 80px;
+    margin-bottom: 10px;
+
+  }
+
+  .get-started div {
+    width: 80%;
+  }
+
+  .fa {
+  font-size: 50px;
+}
+
+.btn {
+  height: 100%;
+  background: $brand-pink ;
+}
+
+}
