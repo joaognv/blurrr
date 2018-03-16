@@ -1,9 +1,8 @@
 
 
 .match-box {
-  background-color: red;
+  background-color: black;
   display: flex;
-  height: 60px;
 }
 
 
@@ -16,5 +15,11 @@
 
 .lst-message {
   width: 75%;
-  background-color: green;
+  background-color: lightgrey;
+}
+
+.match-box {
+  .bubble-right {
+  flex-grow: 1;
+  }
 }

@@ -9,4 +9,8 @@ class User < ApplicationRecord
   has_many :matches, through: :user_matches
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def my_match_with(other_user)
+    self.matches.map {|a| a if a.users.include?(other_user)}.first
+  end
 end

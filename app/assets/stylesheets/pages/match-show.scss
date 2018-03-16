@@ -24,36 +24,6 @@
 
 
 
-  .chat-bubbles {
-    background: white;
-    height: 55vh;
-    overflow: scroll;
-    margin-top: 60px;
-    padding: 0 15px;
-  }
-
-  .bubble-right {
-    padding-left: 35px;
-    margin: 15px;
-  }
-  .bubble-right .chat-bubble {
-     border-radius: 10px;
-     background: $brand-gradient;
-     padding:15px;
-     color: white;
-  }
-
-
-  .bubble-left {
-    padding-right: 35px;
-    margin: 15px;
-  }
- .bubble-left .chat-bubble {
-     border-radius: 10px;
-     background: lightgrey;
-     padding:15px;
-  }
-
 
 
 
@@ -76,5 +46,37 @@
   }
 
 
+}
+
+
+
+.chat-bubbles {
+  background: white;
+  height: 55vh;
+  overflow: scroll;
+  margin-top: 60px;
+  padding: 0 15px;
+}
+
+.bubble-right {
+  padding-left: 35px;
+  margin: 15px;
+}
+.bubble-right .chat-bubble {
+   border-radius: 10px;
+   background: $brand-gradient;
+   padding:15px;
+   color: white;
+}
+
+
+.bubble-left {
+  padding-right: 35px;
+  margin: 15px;
+}
+.bubble-left .chat-bubble {
+   border-radius: 10px;
+   background: lightgrey;
+   padding:15px;
 }
 

@@ -9,8 +9,6 @@
 
       </div>
 
-
-
      <div class="chat-bubbles">
         <% @messages.each do |message| %>
             <div class="<%= message.user == current_user ? "bubble-right" : "bubble-left" %>">
