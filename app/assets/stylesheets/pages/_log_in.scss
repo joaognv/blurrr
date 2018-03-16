@@ -1,3 +1,15 @@
 .log-in {
-  background: $brand-gradient
+  background: #FF2681;
+  height: 100vh;
+
+
+  .container {
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+  }
+}
+
+.form-inputs {
+
 }
