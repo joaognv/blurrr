@@ -6,7 +6,12 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-
+  p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+  }
 }
 
 .blogo {
