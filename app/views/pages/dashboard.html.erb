@@ -1,72 +1,88 @@
 
-<div class="chat-header-mine">
-        <div class="avatar-large avatar-under-line" style="background-image: url(<%= current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png'; %> );" >
+<!-- -------------- -->
+<div class="profile-show">
+  <div class="profile-header">
+    <div class="avatar-medium avatar-drop-on-line" style="background-image: url(<%= @current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+
+    </div>
+
+  </div>
+
+  <div class="profile-body">
+     <div class="profile-box">
+        <div class="profile-row">
+        <div class="profile-icon"><%= image_tag "sporty.png", height: 30 %> </div>
+          <div class="profile-trait">Sporty</div>
+          <div class="stats-bar">
+            <div class="stats-bar-view" style="width:100%">
+            </div>
         </div>
       </div>
-
-
-
-<div>.</div>
-<div>.</div>
-<div>.</div>
-<div>.</div>
-<div>.</div>
-<div>.</div>
-<div>.</div>
-<div>.</div>
-
-
-
-
-
-<h2>Hey, Dickface</h2>
-
-
-
-
-
-
---------------
-
-
-<h3>Your matches:</h3>
-   <% @matches.each do |m|  %>
-<div class="match-box">
-
-    <div class="av-us">
-     <!-- two things in here, with username above, avaatar picture below -->
-      <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
-
-
-      <%= m.last_message %>
-      <% end %>
+        <div class="profile-row">
+        <div class="profile-icon"><%= image_tag "party.png", height: 30 %> </div>
+          <div class="profile-trait">Party</div>
+            <div class="stats-bar">
+              <div class="stats-bar-view" style="width:50%">
+              </div>
+            </div>
+      </div>
+        <div class="profile-row">
+          <div class="profile-icon"><%= image_tag "nerdy.png", height: 30 %> </div>
+          <div class="profile-bar">
+            <div class="profile-trait">Nerdy</div>
+              <div class="stats-bar">
+                <div class="stats-bar-view" style="width:50%">
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="profile-row">
+         <div class="profile-icon"><%= image_tag "organized.png", height: 25 %> </div>
+          <div class="profile-trait">Organized</div>
+          <div class="stats-bar">
+            <div class="stats-bar-view" style="width:75%">
+            </div>
+        </div>
+      </div>
+        <div class="profile-row">
+        <div class="profile-icon"><%= image_tag "spiritual.png", height: 30 %> </div>
+          <div class="profile-trait">Spiritual</div>
+          <div class="stats-bar">
+            <div class="stats-bar-view" style="width:25%">
+            </div>
+        </div>
+      </div>
     </div>
-
-
-
-    <div class="lst-message">
-
-
-      <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
-
-      <%= m.last_message %>
-      <% end %>
-    </div>
-
-
-
-  <% end %>
-
-
-
+  </div>
 </div>
 
+<!-- -------------- -->
+<h3>Your matches:</h3>
 
-<div></div>
+   <% @matches.each do |m|  %>
+  <div class="match-box">
+    <div class="profile-row">
+        <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
+        <div class="avatar-extra-small" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
+
+        </div>
+        <% end %>
+    </div>
+
+      <div class="bubble-right">
+        <%= link_to match_path(m) do %>
+        <div class="chat-bubble">
+          <%= m.last_message %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
 -----------------------
 
 <h3>Your questions:</h3>
 
 <%= link_to "Answer Questions", questions_path %>
 
-m.last_messagepe
