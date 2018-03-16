@@ -14,7 +14,20 @@
   background-color: #FF2681;
   border-radius: 11px;
   width: 150px;
+  border: none;
+  color:white;
+  margin: 15px 0px;
+  padding: 10px;
+}
 
+.button-login:hover {
+  background-color: $brand-blue;
+  color: white;
+}
+
+.button-login:active {
+  background-color: $brand-blue;
+  color: white;
 }
 
 .button-signup {
