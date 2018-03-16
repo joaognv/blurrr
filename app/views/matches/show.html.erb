@@ -1,1 +1,38 @@
-<%= @other_user_match.user.profile.username %>
+
+<div class="chat-page">
+
+      <div class="chat-header">
+        <p class="reciever-name"> <%= @other_user.profile.username %> </p>
+        <div class="avatar-small avatar-above-line" style="background-image: url(<%= @other_user.profile.photo.url ? @other_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+
+        </div>
+
+      </div>
+
+
+
+     <div class="chat-bubbles">
+        <% @messages.each do |message| %>
+            <div class="<%= message.user == current_user ? "bubble-right" : "bubble-left" %>">
+              <div class="chat-bubble">
+                <p>
+                   <%= message.message %>
+                </p>
+              </div>
+
+            </div>
+          <% end %>
+     </div>
+
+
+     <div class="chat-inputs">
+      <!-- Form -->
+        <div class="chatform">
+          <input type="text" class="chat-input">
+          <input type="hidden" id="match_id" value="<%= @match_id %>" />
+          <input type="hidden" id="user_id" value="<%= @user_id %>" />
+          <button class="brand-button-medium btn chat-send fa fa-paper-plane">  </button>
+        </div>
+     </div>
+</div>
+
