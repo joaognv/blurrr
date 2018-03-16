@@ -1,33 +1,29 @@
+<div class="welc" style="background-image: url(<%= image_url 'bg2.png' %>)">
 
-
-<div class="home-page">
-
-
-     <div class="welcome">
-
-    <h2> Welcome to Blurrr</h2>
-     </div>
-
-
-
-
-     <div class="short-intro1">
-        <h4> Put the Heart back into dating <i class="fa fa-heart"></i> </h4>
-     </div>
-
-    <div class="short-intro2">
-           <p>
-            You are about to embark on a journey almost forgotten, you are about to meet the people you've been looking for.
-            </p>
+    <div class="blogo">
+    <%= image_tag "logo3.png" %>
     </div>
 
 
 
-     <div class="get-started">
 
-          <%= link_to 'Get started', new_user_registration_path, class: "btn btn-danger get-started" %>
+
+   <div class="welcbox">
+      <p>Date the person not the photo.</p>
+      <button class="btn button-login"><%= link_to "Log in", new_user_session_path %></button>
+     <div></div>
+      <button class="btn but2 button-signup">
+       <%= link_to "Sign up", new_user_registration_path %></button>
+      <div class="but2">Forgot password?</div>
+   </div>
 </div>
 
+
+   <!--
+    tag line
+    2 buttons
+    forgot password?
+  -->
 
 
 
