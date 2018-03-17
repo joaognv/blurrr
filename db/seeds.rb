@@ -28,8 +28,8 @@ mutch = Match.create(active: true)
 mutch.users << [user1, user2]
 mutch.save!
 
-message1 = Message.create(user: user1, match: mutch, message: "love ya")
-message2 = Message.create(user: user2, match: mutch, message: "cool...")
+message1 = Message.create(user: user1, match: mutch, message: "Hey cowboy")
+message2 = Message.create(user: user2, match: mutch, message: "I think I've seen you before...")
 
 
 
