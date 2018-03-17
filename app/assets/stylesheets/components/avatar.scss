@@ -23,14 +23,14 @@
 
 .avatar-extra-small {
   filter: blur(5px);
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin: auto;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  left: calc(50% - 60px);
+  left: calc(50% - 45px);
 }
 
 .avatar-large {
@@ -54,6 +54,9 @@
   bottom: -40px;
 }
 
+.avatar-above {
+   position: absolute;
+}
 
 .avatar-under-line {
   position: absolute;

@@ -52,6 +52,16 @@
         </div>
       </div>
     </div>
-    <%= link_to "Chat with your match", match_path(current_user.my_match_with(@profile.user)), class:"btn btn-danger" %>
+
+<div class="profbutts">
+          <div class="button-login">
+          <%= link_to "Go Chat!", match_path(current_user.my_match_with(@profile.user)) %>
+          </div>
+
+          <div class="button-signup">
+          <%= link_to "Back to Dash!", dashboard_path(current_user.my_match_with(@profile.user)) %>
+          </div>
+      </div>
+
   </div>
 </div>
