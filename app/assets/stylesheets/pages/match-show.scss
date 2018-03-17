@@ -1,4 +1,13 @@
 
+.reciever-namee {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  margin-top: 100px;
+  color: white;
+  font-size: 20px;
+}
+
 .chat-page {
   background: white;
   overflow: hidden;
@@ -10,9 +19,9 @@
     margin-right: -80px;
     height: 150px;
     background-image: $brand-gradient;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
   }
 
   .chat-header p {
@@ -21,11 +30,6 @@
     text-align: center;
     font-size: 24px;
   }
-
-
-
-
-
 
   .chat-inputs {
     background: lightgrey;
@@ -44,12 +48,7 @@
   .chat-send {
     width: 20%;
   }
-
-
 }
-
-
-
 .chat-bubbles {
   background: white;
   height: 55vh;
@@ -68,7 +67,6 @@
    padding:15px;
    color: white;
 }
-
 
 .bubble-left {
   padding-right: 35px;
