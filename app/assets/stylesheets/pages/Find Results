@@ -1,0 +1,91 @@
+Searching 170 files for "log up"
+
+0 matches
+
+Searching 170 files for "sign up"
+
+/Users/joaoviana/code/joaognv/blurrr/app/views/devise/registrations/new.html.erb:
+    3    <div class="container">
+    4
+    5: <h2>Sign up</h2>
+    6
+    7  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    .
+   15
+   16    <div class="form-actions">
+   17:     <%= f.button :submit, "Sign up" %>
+   18    </div>
+   19  <% end %>
+
+/Users/joaoviana/code/joaognv/blurrr/app/views/devise/shared/_links.html.erb:
+    4
+    5  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    6:   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+    7  <% end -%>
+    8
+
+/Users/joaoviana/code/joaognv/blurrr/app/views/pages/home.html.erb:
+   14       <div></div>
+   15        <button class="btn but2 button-signup">
+   16:        <%= link_to "Sign up", new_user_registration_path %></button>
+   17        <div class="but2">Forgot password?</div>
+   18     </div>
+
+/Users/joaoviana/code/joaognv/blurrr/config/initializers/devise.rb:
+   89    # By default, Devise cleans up the CSRF token on authentication to
+   90    # avoid CSRF token fixation attacks. This means that, when using AJAX
+   91:   # requests for sign in and sign up, you need to get a new CSRF token
+   92    # from the server. You can disable this option at your own risk.
+   93    # config.clean_up_csrf_token_on_authentication = true
+
+/Users/joaoviana/code/joaognv/blurrr/config/locales/devise.en.yml:
+   15        not_found_in_database: "Invalid %{authentication_keys} or password."
+   16        timeout: "Your session expired. Please sign in again to continue."
+   17:       unauthenticated: "You need to sign in or sign up before continuing."
+   18        unconfirmed: "You have to confirm your email address before continuing."
+   19      mailer:
+
+6 matches across 5 files
+
+
+Searching 170 files for ".log-in"
+
+/Users/joaoviana/code/joaognv/blurrr/app/assets/stylesheets/components/_registration-form.scss:
+    3  }
+    4
+    5: .log-in h2 {
+    6    color: white;
+    7  }
+
+/Users/joaoviana/code/joaognv/blurrr/app/assets/stylesheets/pages/_log_in.scss:
+    1: .log-in {
+    2    background: #FF2681;
+    3    height: 100vh;
+
+2 matches across 2 files
+
+
+Searching 170 files for "=log-in"
+
+0 matches
+
+Searching 170 files for "log-in"
+
+/Users/joaoviana/code/joaognv/blurrr/app/assets/stylesheets/components/_registration-form.scss:
+    3  }
+    4
+    5: .registratin h2 {
+    6    color: white;
+    7  }
+
+/Users/joaoviana/code/joaognv/blurrr/app/views/devise/registrations/new.html.erb:
+    1: <div class="registration">
+    2
+    3    <div class="container login-container" style="background-image: url(<%= image_url 'bg22.png' %>);">
+
+/Users/joaoviana/code/joaognv/blurrr/app/views/devise/sessions/new.html.erb:
+    1: <div class="registration">
+    2    <div class="container login-container" style="background-image: url(<%= image_url 'bg22.png' %>);">
+    3
+
+3 matches across 3 files

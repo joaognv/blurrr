@@ -3,11 +3,11 @@
     <h1>Create your Profile</h1>
  <div class="devise-form">
           <%= simple_form_for(@profile) do |p| %>
-            <%= p.input :username %>
-            <%= p.input :city %>
-            <%= p.input :age %>
-            <%= p.input :preference %>
-            <%= p.input :gender %>
+            <%= p.input :username, placeholder: "Name" %>
+            <%= p.input :age, placeholder: "Age" %>
+            <%= p.input :city, placeholder: "City" %>
+            <%= p.input :gender, placeholder: "Gender" %>
+            <%= p.input :preference, placeholder: "Preference" %>
             <%= p.input :nerdy, as: :hidden %>
             <%= p.input :sporty, as: :hidden %>
             <%= p.input :party, as: :hidden %>
