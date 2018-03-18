@@ -27,7 +27,7 @@ function initChat(){
     chatInput.value = '';  // this clears the input
 
     // send a POST request to create the message in the DB
-    const url = "http://localhost:3000/messages";
+    const url = "http://www.blurrr.me/messages";
     fetch(url, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
