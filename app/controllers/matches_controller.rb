@@ -1,5 +1,8 @@
 class MatchesController < ApplicationController
 
+  def new
+  end
+
   def show
     @match_id = params[:id]  # 13
     the_match = Match.find(@match_id)
@@ -17,6 +20,9 @@ class MatchesController < ApplicationController
 
     # get the list of messages to display
     @messages = the_match.messages
+  end
+
+  def delete
   end
 
 end
