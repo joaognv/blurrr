@@ -4,10 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  devise_for :users
-
-  root to: 'pages#dashboard'
-
+  devise_for :users, controllers: { registrations: "registrations" }
 
   get "/dashboard", to: "pages#dashboard", as: :dashboard
   resources :profiles, only: [:show, :new, :create]
