@@ -6,8 +6,15 @@
 .profile-row {
     position: relative;
     overflow: hidden;
-    margin: 0 16px 16px 0;
-    padding: 0 0 0 50px;
+    margin: 0 16px 0 0;
+    padding: 0 0 0 40px;
+}
+
+.profile-roww {
+    position: relative;
+    overflow: hidden;
+    margin: 0 16px 0 0;
+    padding: 0 0 0 0;
 }
 .profile-icon {
   background-size: cover;

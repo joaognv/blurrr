@@ -2,6 +2,7 @@
 
 .match-box {
   display: flex;
+  margin-top: 20px;
 }
 
 
@@ -18,6 +19,7 @@
 }
 
 .match-box {
+  padding: 15px;
   .bubble-right {
   flex-grow: 1;
   }
