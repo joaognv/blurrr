@@ -7,15 +7,26 @@
   border-bottom-right-radius: 10px ;
 }
 
+.button-edit {
+  background-color: #4901FF;
+  border-radius: 11px;
+  width: 200px;
+  border: none;
+  color:white;
+  margin: 15px 0px;
+  padding: 10px;
+  text-align: center;
+}
+
 .button-signup {
   background-color: #4901FF;
-    border-radius: 11px;
+  border-radius: 11px;
   width: 150px;
   border: none;
   color:white;
   margin: 15px 0px;
   padding: 10px;
-    text-align: center;
+  text-align: center;
 }
 
 .button-login {
