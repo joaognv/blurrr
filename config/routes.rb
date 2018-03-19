@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'questions/show'
-  get 'matches/show'
-
   root to: 'pages#home'
 
   devise_for :users
@@ -11,7 +8,9 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "pages#dashboard", as: :dashboard
   resources :profiles, only: [:show, :new, :create]
-  resources :matches, only: [:show, :new]
+  resources :matches, only: [:show, :new] do
+    resources :messages, only: [:index]
+  end
   resources :messages, only:[:create]
   resources :questions, only: [:index]
 
