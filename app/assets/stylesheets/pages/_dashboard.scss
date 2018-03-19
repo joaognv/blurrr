@@ -4,7 +4,7 @@
   justify-content: center;
   content-align: center;
   padding-top: 20px;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .chat-header-mine {
@@ -38,24 +38,29 @@ section .section-title {
     color: #eee;
 }
 
-#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #f3f3f3;
-    background-color: transparent;
-    border-color: transparent transparent #f3f3f3;
-    border-bottom: 4px solid !important;
-    font-size: 20px;
-    font-weight: bold;
 
+
+.nav-tabs li {
+  color: #f3f3f3;
+  background-color: transparent;
+  border-color: transparent transparent #f3f3f3;
+  font-size: 30px;
+  font-weight: bold;
 }
+
+.nav-tabs li.active {
+  border-bottom: 3px solid #FF2681;
+}
+
+
+
 #tabs .nav-tabs .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    color: #4901FF;
-    font-size: 20px;
+  border: 0;  // remove the outer border
+  color: black;
+  font-size: 15px;
 }
 
-#nav-tab {
-  text-align: center;
-}
+// #nav-tab {
+//   text-align: center;
+// }
 
