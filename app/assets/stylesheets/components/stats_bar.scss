@@ -1,4 +1,5 @@
 
+
 .profile-box {
   padding: 15px;
 }
@@ -7,8 +8,9 @@
 .profile-row {
     position: relative;
     overflow: hidden;
-    margin: 0 16px 0 0;
     padding: 0 0 0 40px;
+    margin-top: 25px;
+    margin-bottom: 16px;
 }
 
 .profile-roww {
@@ -17,6 +19,7 @@
     margin: 0 16px 0 0;
     padding: 0 0 0 0;
 }
+
 .profile-icon {
   background-size: cover;
   padding: 2px;
@@ -27,19 +30,17 @@
 }
 
 .profile-trait {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1.25;
   padding: 4px 0 3px 0;
   color: #1e1e1e;
 }
 
-
 .stats-bar {
   height: 10px;
   border-radius: 8px;
   color: red!important;
-
 }
 
 .stats-bar-view {
