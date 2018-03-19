@@ -2,7 +2,9 @@
 .profile-nav {
   display: flex;
   justify-content: center;
+  content-align: center;
   padding-top: 20px;
+  flex-direction: column;
 }
 
 .chat-header-mine {
@@ -43,6 +45,7 @@ section .section-title {
     border-bottom: 4px solid !important;
     font-size: 20px;
     font-weight: bold;
+
 }
 #tabs .nav-tabs .nav-link {
     border: 1px solid transparent;
@@ -50,5 +53,9 @@ section .section-title {
     border-top-right-radius: .25rem;
     color: #4901FF;
     font-size: 20px;
+}
+
+#nav-tab {
+  text-align: center;
 }
 
