@@ -4,7 +4,7 @@ class Profile < ApplicationRecord
   validates :username, presence: true
   validates :city, presence: true
   validates :age, presence: true
-  validates :gender, presence: true, inclusion: { in: ["female", "male"] }
-  validates :preference, inclusion: { in: ["men", "women"] }
+  validates :gender, presence: true, inclusion: { in: ["Female", "Male"] }
+  validates :preference, inclusion: { in: ["Men", "Women"] }
 
 end
