@@ -33,6 +33,19 @@
   left: calc(50% - 45px);
 }
 
+.avatar-extra-small-matches {
+  filter: blur(5px);
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: calc(50% - 40px);
+}
+
+
 .avatar-large {
   width: 200px;
   height: 200px;

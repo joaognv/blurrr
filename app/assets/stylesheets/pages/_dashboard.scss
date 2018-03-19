@@ -1,3 +1,12 @@
+
+.profile-nav {
+  display: flex;
+  justify-content: center;
+  content-align: center;
+  padding-top: 20px;
+  flex-direction: column;
+}
+
 .chat-header-mine {
     position: relative;
     margin-left: -80px;
@@ -8,4 +17,45 @@
     border-bottom-right-radius: 50%;
     padding-top: 20px;
   }
+
+
+  /* Tabs*/
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#tabs{
+  background: #FFFFFF;
+    color: #eee;
+}
+#tabs h6.section-title{
+    color: #eee;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #4901FF;
+    font-size: 20px;
+}
+
+#nav-tab {
+  text-align: center;
+}
 
