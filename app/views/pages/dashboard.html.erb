@@ -1,116 +1,122 @@
-
-<!-- -------------- -->
 <div class="profile-show">
   <div class="profile-header">
     <div class="avatar-medium avatar-drop-on-line" style="background-image: url(<%= @current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
-
-    </div>
-
-  </div>
-
-  <div class="profile-body">
-     <div class="profile-box">
-        <div class="profile-row">
-        <div class="profile-icon"><%= image_tag "sporty.png", height: 30 %> </div>
-          <div class="profile-trait">Sporty</div>
-          <div class="stats-bar">
-            <div class="stats-bar-view" style="width:100%">
-            </div>
-        </div>
-      </div>
-        <div class="profile-row">
-        <div class="profile-icon"><%= image_tag "party.png", height: 30 %> </div>
-          <div class="profile-trait">Party</div>
-            <div class="stats-bar">
-              <div class="stats-bar-view" style="width:50%">
-              </div>
-            </div>
-      </div>
-        <div class="profile-row">
-          <div class="profile-icon"><%= image_tag "nerdy.png", height: 30 %> </div>
-          <div class="profile-bar">
-            <div class="profile-trait">Nerdy</div>
-              <div class="stats-bar">
-                <div class="stats-bar-view" style="width:50%">
-                </div>
-              </div>
-          </div>
-        </div>
-        <div class="profile-row">
-         <div class="profile-icon"><%= image_tag "organized.png", height: 25 %> </div>
-          <div class="profile-trait">Organized</div>
-          <div class="stats-bar">
-            <div class="stats-bar-view" style="width:75%">
-            </div>
-        </div>
-      </div>
-        <div class="profile-row">
-        <div class="profile-icon"><%= image_tag "spiritual.png", height: 30 %> </div>
-          <div class="profile-trait">Spiritual</div>
-          <div class="stats-bar">
-            <div class="stats-bar-view" style="width:25%">
-            </div>
-        </div>
-      </div>
     </div>
   </div>
-</div>
 
-<!-- -------------- -->
+
+
+
+
+
 <section id="tabs">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 ">
-        <nav>
+
+        <nav class="profile-nav">
+
           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Matches</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a> |
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Matches</a> |
             <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Questions</a>
           </div>
-        </nav>
+
+
         <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+
+
+                       <div class="profile-body">
+                           <div class="profile-box">
+
+                              <div class="profile-row">
+                              <div class="profile-icon"><%= image_tag "sporty.png", height: 30 %> </div>
+                                <div class="profile-trait">Sporty</div>
+                                <div class="stats-bar">
+                                  <div class="stats-bar-view" style="width:100%">
+                                  </div>
+                              </div>
+                            </div>
+                              <div class="profile-row">
+                              <div class="profile-icon"><%= image_tag "party.png", height: 30 %> </div>
+                                <div class="profile-trait">Party</div>
+                                  <div class="stats-bar">
+                                    <div class="stats-bar-view" style="width:50%">
+                                    </div>
+                                  </div>
+                            </div>
+                              <div class="profile-row">
+                                <div class="profile-icon"><%= image_tag "nerdy.png", height: 30 %> </div>
+                                <div class="profile-bar">
+                                  <div class="profile-trait">Nerdy</div>
+                                    <div class="stats-bar">
+                                      <div class="stats-bar-view" style="width:50%">
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="profile-row">
+                               <div class="profile-icon"><%= image_tag "organized.png", height: 25 %> </div>
+                                <div class="profile-trait">Organized</div>
+                                <div class="stats-bar">
+                                  <div class="stats-bar-view" style="width:75%">
+                                  </div>
+                              </div>
+                            </div>
+                              <div class="profile-row">
+                              <div class="profile-icon"><%= image_tag "spiritual.png", height: 30 %> </div>
+                                <div class="profile-trait">Spiritual</div>
+                                <div class="stats-bar">
+                                  <div class="stats-bar-view" style="width:25%">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
           </div>
           <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+
+                       <% @matches.each do |m|  %>
+                      <div class="match-box">
+
+                        <div class="profile-roww">
+                            <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
+
+                            <div class="avatar-extra-small-matches" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
+                            </div>
+                            <% end %>
+                        </div>
+
+
+                          <div class="bubbble-right chat-bubble-match">
+                            <%= link_to match_path(m) do %>
+                            <div class="chat-bubble-match">
+                              <%= m.last_message %>
+                              <% end %>
+                            </div>
+                          </div>
+                        <% end %>
+
+                      </div>
+
 
           </div>
           <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
             Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<h3>Your matches:</h3>
 
-   <% @matches.each do |m|  %>
-  <div class="match-box">
-    <div class="profile-row">
-        <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
-        <div class="avatar-extra-small" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
-
-        </div>
-        <% end %>
-    </div>
-
-      <div class="bubble-right">
-        <%= link_to match_path(m) do %>
-        <div class="chat-bubble">
-          <%= m.last_message %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+</div>
 
 
------------------------
 
-<h3>Your questions:</h3>
-
-<%= link_to "Answer Questions", questions_path %>
 
