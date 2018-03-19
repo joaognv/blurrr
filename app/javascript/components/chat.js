@@ -42,6 +42,52 @@ function initChat(){
 
   });
 
+  const refresh = document.querySelector('.refresh');
+  refresh.addEventListener(
+    'click',
+    function(event){
+      event.preventDefault();
+      // we want to reload the div chat bubbles
+      // fetch from messages
+      const url = `/matches/${matchId}/messages`;
+      fetch(url, {
+        method: 'get',
+        headers: { "Content-Type": "application/json" },
+      })
+      .then(response => response.json())
+      .then((messages) => {
+
+        document.querySelector('.chat-bubbles').innerHTML = "";
+        // 1. clear the messages list :
+        //    .innerHTML = ""  or $(".whatver").html("");
+        // 2. iterate over each message
+        messages.forEach(function(message) {
+          // message is a hash
+          const messageUserId = message.user_id;
+          let messagePosition;
+
+          if (messageUserId == userId) {
+            messagePosition = "right";
+          } else {
+            messagePosition = "left";
+          }
+
+          chatBubbles.insertAdjacentHTML(
+            'beforeend',
+            `<div class="bubble-${messagePosition}"><div class="chat-bubble"><p>${message.message}</p></div></div>`
+          );
+
+          // if userId is current_user
+          // then bubble-right
+          // else bubble-left
+        });
+
+        // 3. insert the HTML for each message
+        console.log(messages);
+      });
+    }
+  );
+
 }
 
 export {initChat};

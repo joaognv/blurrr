@@ -3,6 +3,14 @@ class MessagesController < ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :authenticate_user!
 
+  # the route will look like /matches/23/messages
+  # /matches/:match_id/messages
+  def index
+    match_id = params[:match_id]
+    @messages = Message.where(match_id: match_id)
+    render json: @messages
+  end
+
   def create
     @message = Message.new(message_params)
     if @message.save
