@@ -1,5 +1,10 @@
 function initChat(){
+
   const submit = document.querySelector('.chat-send');
+
+   // scroll to bottom of chatBubbles div
+  const chatBubbles = document.querySelector('.chat-bubbles')
+  chatBubbles.scrollTo(0, chatBubbles.scrollHeight);
 
   const matchIdInput = document.querySelector("#match_id");
   const matchId = matchIdInput.value;
@@ -12,7 +17,6 @@ function initChat(){
     const chatInput = document.querySelector('.chat-input');
 
     // append a new message to the list
-    const chatBubbles = document.querySelector('.chat-bubbles')
     chatBubbles.insertAdjacentHTML('beforeend', `<div class="bubble-right"><div class="chat-bubble"><p>${chatInput.value}</p></div></div>`);
 
     // prepare the data to send before clearing the input
@@ -27,16 +31,14 @@ function initChat(){
     chatInput.value = '';  // this clears the input
 
     // send a POST request to create the message in the DB
-    const url = "http://www.blurrr.me/messages";
+    const url = "/messages";
     fetch(url, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then((data) => {
-      console.log(data);
-    });
+
+    chatBubbles.scrollTo(0, chatBubbles.scrollHeight);
 
   });
 
