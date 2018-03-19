@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
 
-  root to: 'pages#dashboard'
+  get "/dashboard", to: "pages#dashboard", as: :dashboard
+
 
 
   get "/dashboard", to: "pages#dashboard", as: :dashboard
-  resources :profiles, only: [:show, :new, :create]
+  resources :profiles, only: [:show, :new, :create, :edit, :update]
+
   resources :matches, only: [:show, :new] do
     resources :messages, only: [:index]
   end
@@ -17,3 +19,4 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
