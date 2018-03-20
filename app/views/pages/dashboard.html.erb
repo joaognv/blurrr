@@ -91,7 +91,7 @@
                         <div class="profile-roww">
                             <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
 
-                            <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs">
+                            <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs avatar-wrapper-block">
                               <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
                               </div>
                             </div>
