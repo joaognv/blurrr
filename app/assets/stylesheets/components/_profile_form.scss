@@ -1,6 +1,21 @@
 
 .prof-new-form {
-  background-color: #4901FF;
+  background-image: $brand-gradient;
+  padding: 100px 60px;
+  color: white;
+  .has-error, .help-block {
+    color: white !important;
+  }
+  select {
+    background-color: rgba(0,0,0,0)
+  }
+  input, select {
+    color: white;
+  }
+  input:focus, select:focus {
+    border-color: lightgrey !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lightgrey !important;
+  }
   h1 {
     color: whitesmoke;
   }

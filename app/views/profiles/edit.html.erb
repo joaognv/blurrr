@@ -1,0 +1,45 @@
+ <div class="container prof-new-form">
+  <!-- if we move this container, make sure handle prof-new-form scss -->
+ <div class="devise-form">
+          <%= simple_form_for(@profile) do |p| %>
+            <h3>Edit Your Stats</h3>
+            <br>
+            <div class="sliders-container">
+              <span class="slider-category">Sporty </span><span id="val-sporty"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[sporty]" min="1" max="10" value="<%= current_user.profile.sporty %>" class="slider" id="sporty">
+              </div>
+              <span class="slider-category">Party  </span><span id="val-party"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[party]" min="1" max="10" value="<%= current_user.profile.party %>" class="slider" id="party">
+              </div>
+              <span class="slider-category">Nerdy  </span><span id="val-nerdy"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[nerdy]" min="1" max="10" value="<%= current_user.profile.nerdy %>" class="slider" id="nerdy">
+              </div>
+              <span class="slider-category">Organized  </span><span id="val-organized"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[organized]" min="1" max="10" value="<%= current_user.profile.organized %>" class="slider" id="organized">
+              </div>
+              <span class="slider-category">Spiritual  </span><span id="val-spiritual"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[spiritual]" min="1" max="10" value="<%= current_user.profile.spiritual %>" class="slider" id="spiritual">
+              </div>
+            </div>
+            <br>
+            <br>
+            <h3>Edit Your Info</h3>
+            <%= p.input :username, placeholder: "Name" %>
+            <%= p.input :age, placeholder: "Age" %>
+            <%= p.input :city, placeholder: "City" %>
+            <%= p.input :gender, collection: ["male", "female"], prompt: "Gender" %>
+            <%= p.input :preference,  collection: ["men", "women"], prompt: "Looking for..." %>
+            <%= p.input :photo %>
+            <%= p.input :photo_cache, as: :hidden %>
+
+            <%= p.button :submit, class:"brand-button"%>
+
+          <% end %>
+
+        </div>
+</div>
