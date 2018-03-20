@@ -4,7 +4,7 @@
 
 <% @questions.each do |q| %>
   <div class="form-box-full-width">
-    <%= simple_form_for q, url: questions_path, method: :post do |f| %>
+    <%= simple_form_for q, url: user_answers_path, method: :post, html: {class: "question-form"} do |f| %>
         <%= q.question %>
         <%= f.input :answers, as: :radio_buttons, collection: q.answers, label_method: :answer  %>
       <div class="form-actions">
@@ -14,8 +14,8 @@
   </div>
 <% end  %>
 
-<div class="button-signup">
-  <%= link_to "Find me a Match", new_match_path %>
-</div>
+    <div class="button-signup">
+      <%= link_to "Find me a Match", new_match_path %>
+    </div>
 
 </div>
