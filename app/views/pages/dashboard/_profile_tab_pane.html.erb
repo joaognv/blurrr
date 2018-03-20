@@ -1,14 +1,10 @@
 <div class="profile-body">
   <div class="profile-box">
     <div class="profile-row">
-      <div class="profile-icon">
-        <%= image_tag "sporty.png", height: 30 %>
-      </div>
-      <div class="profile-trait">
-        Sporty
-      </div>
+      <div class="profile-icon"><%= image_tag "sporty.png", height: 30 %></div>
+      <div class="profile-trait">Sporty</div>
       <div class="stats-bar">
-        <div class="stats-bar-view" style="width:100%">
+        <div class="stats-bar-view" style="width:<%= current_user.profile.sporty %>0%">
         </div>
       </div>
     </div>
@@ -16,7 +12,7 @@
       <div class="profile-icon"><%= image_tag "party.png", height: 30 %> </div>
       <div class="profile-trait">Party</div>
       <div class="stats-bar">
-        <div class="stats-bar-view" style="width:50%">
+        <div class="stats-bar-view" style="width:<%= current_user.profile.party %>0%">
         </div>
       </div>
     </div>
@@ -25,7 +21,7 @@
       <div class="profile-bar">
         <div class="profile-trait">Nerdy</div>
           <div class="stats-bar">
-            <div class="stats-bar-view" style="width:50%">
+            <div class="stats-bar-view" style="width:<%= current_user.profile.nerdy %>0%">
             </div>
           </div>
       </div>
@@ -34,7 +30,7 @@
       <div class="profile-icon"><%= image_tag "organized.png", height: 25 %> </div>
       <div class="profile-trait">Organized</div>
       <div class="stats-bar">
-        <div class="stats-bar-view" style="width:75%">
+        <div class="stats-bar-view" style="width:<%= current_user.profile.organized %>0%">
         </div>
       </div>
     </div>
@@ -42,12 +38,12 @@
       <div class="profile-icon"><%= image_tag "spiritual.png", height: 30 %> </div>
       <div class="profile-trait">Spiritual</div>
       <div class="stats-bar">
-        <div class="stats-bar-view" style="width:25%">
+        <div class="stats-bar-view" style="width:<%= current_user.profile.spiritual %>0%">
         </div>
       </div>
     </div>
   </div>
   <div class="button-edit">
-    <%= link_to "Edit My attributes", dashboard_path %>
+    <%= link_to "Edit your profile", edit_profile_path(current_user.profile) %>
   </div>
 </div>
