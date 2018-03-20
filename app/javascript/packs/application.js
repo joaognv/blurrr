@@ -3,7 +3,16 @@ import { initChat } from "../components/chat.js";
 import { chatValidator} from "../components/chatValidator.js";
 import { blur } from "../components/blur.js";
 import { initSlider } from "../components/sliders.js";
+import { submitQuestion } from "../components/questions.js";
 
-initSlider();
-initChat();
-chatValidator();
+if (document.getElementsByClassName("chat-page")[0]) {
+  initChat();
+  chatValidator();
+}
+if (document.getElementsByClassName("prof-new-form")[0]) {
+  initSlider();
+}
+if (document.getElementsByClassName("Qpage")[0]) {
+  submitQuestion();
+}
+
