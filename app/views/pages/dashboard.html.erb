@@ -4,54 +4,6 @@
     </div>
   </div>
 
-
-
-  <%= link_to "Edit your profile", edit_profile_path(current_user.profile), style: "color:black"%>
-  <div class="profile-body">
-     <div class="profile-box">
-        <div class="profile-row">
-        <div class="profile-icon"><%= image_tag "sporty.png", height: 30 %> </div>
-          <div class="profile-trait">Sporty</div>
-          <div class="stats-bar">
-            <div class="stats-bar-view" style="width:<%= current_user.profile.sporty %>0%">
-            </div>
-          </div>
-         </div>
-        <div class="profile-row">
-        <div class="profile-icon"><%= image_tag "party.png", height: 30 %> </div>
-          <div class="profile-trait">Party</div>
-            <div class="stats-bar">
-              <div class="stats-bar-view" style="width:<%= current_user.profile.party %>0%">
-              </div>
-            </div>
-          </div>
-        <div class="profile-row">
-          <div class="profile-icon"><%= image_tag "nerdy.png", height: 30 %> </div>
-          <div class="profile-bar">
-            <div class="profile-trait">Nerdy</div>
-              <div class="stats-bar">
-                <div class="stats-bar-view" style="width:<%= current_user.profile.nerdy %>0%">
-              </div>
-            </div>
-          </div>
-         <div class="profile-row">
-         <div class="profile-icon"><%= image_tag "organized.png", height: 25 %> </div>
-          <div class="profile-trait">Organized</div>
-          <div class="stats-bar">
-            <div class="stats-bar-view" style="width:<%= current_user.profile.organized %>0%">
-            </div>
-        </div>
-    </div >
-        <div class="profile-row">
-        <div class="profile-icon"><%= image_tag "spiritual.png", height: 30 %> </div>
-          <div class="profile-trait">Spiritual</div>
-          <div class="stats-bar">
-            <div class="stats-bar-view" style="width:<%= current_user.profile.spiritual %>0%">
-            </div>
-        </div>
-   </div>
-
-
 <section id="tabs">
   <div class="container">
     <div class="row">
@@ -86,16 +38,12 @@
                       <%= m.last_message %>
                     </div>
                   <% end %>
-
                 </div>
               </div>
             <% end %>
           </div>
 
-
-          <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-            Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
-          </div>
+          <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab"> There are currently no questions to view. </div>
 
         </div>
 
@@ -104,8 +52,6 @@
   </div>
 </section>
 
-
-</div>
 
 </div>
 

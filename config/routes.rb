@@ -5,9 +5,6 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "pages#dashboard", as: :dashboard
 
-
-
-  get "/dashboard", to: "pages#dashboard", as: :dashboard
   resources :profiles, only: [:show, :new, :create, :edit, :update]
 
   resources :matches, only: [:show, :new] do
