@@ -2,23 +2,23 @@
   padding-top: 100px
 }
 
-.registration h2 {
+ .registration h2 {
   color: white;
 }
-.form-group input {
+.registration .form-group input {
     background-color: transparent;
     font-size: 14px;
 }
-.form-group input::placeholder {
+.registration .form-group input::placeholder {
   color: white;
 
 }
 
-.form-group label {
+.registration .form-group label {
   visibility: hidden;
 }
 
-.form-control {
+.registration .form-control {
     border: none;
     border-bottom: 1px solid white;
     border-left: 1px solid white;
