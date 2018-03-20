@@ -1,10 +1,19 @@
 .brand-button-medium {
   background-color: $brand-pink;
+  transition: 0.5s;
   color: white;
   padding: 20px;
   font-size: 30px;
   border-top-right-radius: 10px ;
   border-bottom-right-radius: 10px ;
+}
+
+.brand-button-medium:hover {
+  color: white;
+}
+
+.brand-button-medium:active {
+  font-size: 43px;
 }
 
 .button-edit {

@@ -8,8 +8,6 @@
       <h3 class="reciever-namee"><%= @other_user.profile.username %>, <%= @other_user.profile.age %></h3>
       </div>
 
-    <div><button class="refresh btn">refresh</button></div>
-
     <div class="chat-bubbles">
 
         <% @messages.each do |message| %>
@@ -31,7 +29,7 @@
           <input type="text" class="chat-input">
           <input type="hidden" id="match_id" value="<%= @match_id %>" />
           <input type="hidden" id="user_id" value="<%= @user_id %>" />
-          <button class="brand-button-medium btn chat-send fa fa-paper-plane">  </button>
+          <button disabled class="brand-button-medium btn chat-send fa fa-paper-plane">  </button>
         </div>
      </div>
 </div>
