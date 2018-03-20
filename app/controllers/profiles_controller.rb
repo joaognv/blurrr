@@ -8,6 +8,15 @@ class ProfilesController < ApplicationController
    @profile = Profile.new
   end
 
+  def edit
+    @profile = current_user.profile
+  end
+
+  def update
+    profile = Profile.find(params[:id])
+    profile.update(profile_params)
+    redirect_to dashboard_path
+  end
 
   def create
      @profile = Profile.new(profile_params)
