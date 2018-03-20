@@ -42,11 +42,9 @@ function initChat(){
 
   });
 
-  const refresh = document.querySelector('.refresh');
-  refresh.addEventListener(
-    'click',
-    function(event){
-      event.preventDefault();
+  const refresh = document.querySelector('.chatBubbles');
+
+    function refreshPage() {
       // we want to reload the div chat bubbles
       // fetch from messages
       const url = `/matches/${matchId}/messages`;
@@ -86,7 +84,7 @@ function initChat(){
         console.log(messages);
       });
     }
-  );
+  setInterval( refreshPage, 5000);
 
 }
 

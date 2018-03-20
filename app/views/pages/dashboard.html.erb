@@ -1,6 +1,8 @@
 <div class="profile-show">
   <div class="profile-header">
-    <div class="avatar-medium avatar-drop-on-line" style="background-image: url(<%= @current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+    <div class="avatar-sharp-wrapper avatar-sharp-wrapper-md avatar-wrapper-drop-on-line">
+      <div class="avatar avatar-md" style="background-image: url(<%= @current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+      </div>
     </div>
   </div>
 
@@ -23,25 +25,31 @@
 
           <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 
-            <% @matches.each do |m|  %>
-              <div class="match-box">
-                <div class="profile-roww">
-                  <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
-                    <div class="avatar-extra-small-matches" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
-                    </div>
-                  <% end %>
-                </div>
+                       <% @matches.each do |m|  %>
+                      <div class="match-box">
 
-                <div class="bubbble-right chat-bubble-match">
-                  <%= link_to match_path(m) do %>
-                    <div class="chat-bubble-match">
-                      <%= m.last_message %>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            <% end %>
-          </div>
+                        <div class="profile-roww">
+                            <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
+
+                            <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs avatar-wrapper-block">
+                              <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
+                              </div>
+                            </div>
+                            <% end %>
+                        </div>
+
+
+                          <div class="bubbble-right chat-bubble-match">
+                            <%= link_to match_path(m) do %>
+                            <div class="chat-bubble-match">
+                              <%= m.last_message %>
+                              <% end %>
+                            </div>
+                          </div>
+                        <% end %>
+
+                      </div>
+
 
           <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab"> There are currently no questions to view. </div>
 
