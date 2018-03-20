@@ -8,11 +8,31 @@
             <%= p.input :city, placeholder: "City" %>
             <%= p.input :gender, collection: ["Male", "Female"], prompt: "Gender" %>
             <%= p.input :preference,  collection: ["Men", "Women"], prompt: "Looking for..." %>
-            <%= p.input :nerdy, as: :hidden %>
-            <%= p.input :sporty, as: :hidden %>
-            <%= p.input :party, as: :hidden %>
-            <%= p.input :organized, as: :hidden %>
-            <%= p.input :spiritual, as: :hidden %>
+            <br>
+            <h3>Personlize Your Stats</h3>
+            <br>
+            <div class="sliders-container">
+              <span class="slider-category">Sporty </span><span id="val-sporty"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[sporty]" min="1" max="10" value="<%= 5 %>" class="slider" id="sporty">
+              </div>
+              <span class="slider-category">Party  </span><span id="val-party"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[party]" min="1" max="10" value="<%= 5 %>" class="slider" id="party">
+              </div>
+              <span class="slider-category">Nerdy  </span><span id="val-nerdy"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[nerdy]" min="1" max="10" value="<%= 5 %>" class="slider" id="nerdy">
+              </div>
+              <span class="slider-category">Organized  </span><span id="val-organized"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[organized]" min="1" max="10" value="<%= 5 %>" class="slider" id="organized">
+              </div>
+              <span class="slider-category">Spiritual  </span><span id="val-spiritual"></span><span class="slider-after"> / 10 </span>
+              <div class="slidecontainer">
+                <input type="range" name="profile[spiritual]" min="1" max="10" value="<%= 5 %>" class="slider" id="spiritual">
+              </div>
+            </div>
             <%= p.input :photo %>
             <%= p.input :photo_cache, as: :hidden %>
             <%= p.button :submit, class:"brand-button" %>
