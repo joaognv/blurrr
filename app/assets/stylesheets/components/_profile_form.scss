@@ -37,3 +37,14 @@
     box-shadow: none;
   }
 }
+
+.prof-new-form select:required:invalid {
+    color: grey;
+}
+.prof-new-form select {
+    color: white;
+}
+
+.control-label {
+  visibility: hidden;
+}
