@@ -28,6 +28,13 @@
   filter: blur(5px);
 }
 
+.avatar-no-blur {
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .avatar-lg {
   width: 200px;
   height: 200px;
@@ -44,8 +51,8 @@
 }
 
 .avatar-xs {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 
 
