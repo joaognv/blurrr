@@ -1,6 +1,8 @@
 <div class="profile-show">
   <div class="profile-header">
-    <div class="avatar-medium avatar-drop-on-line" style="background-image: url(<%= @current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+    <div class="avatar-sharp-wrapper avatar-sharp-wrapper-md avatar-wrapper-drop-on-line">
+      <div class="avatar avatar-md" style="background-image: url(<%= @current_user.profile.photo.url ? current_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+      </div>
     </div>
   </div>
 
@@ -89,7 +91,9 @@
                         <div class="profile-roww">
                             <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
 
-                            <div class="avatar-extra-small-matches" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
+                            <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs">
+                              <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
+                              </div>
                             </div>
                             <% end %>
                         </div>

@@ -9,6 +9,12 @@ class MessagesController < ApplicationController
     match_id = params[:match_id]
     @messages = Message.where(match_id: match_id)
     render json: @messages
+    # this will look like
+    # [
+    #   {message: "sdhfkas", user1_id: 34},
+    #   {message: "sdhfkas", user1_id: 34},
+    #   {message: "sdhfkas", user1_id: 34},
+    # ]
   end
 
   def create

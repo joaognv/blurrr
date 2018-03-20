@@ -2,8 +2,10 @@
 <div class="chat-page">
       <div class="chat-header">
 
-        <div class="avatar-extra-small avatar-above" style="background-image: url(<%= @other_user.profile.photo.url ? @other_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+      <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs">
+        <div class="avatar avatar-xs " style="background-image: url(<%= @other_user.profile.photo.url ? @other_user.profile.photo.url : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
         </div>
+      </div>
 
       <h3 class="reciever-namee"><%= @other_user.profile.username %>, <%= @other_user.profile.age %></h3>
       </div>
