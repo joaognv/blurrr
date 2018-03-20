@@ -14,8 +14,12 @@ class ProfilesController < ApplicationController
 
   def update
     profile = Profile.find(params[:id])
-    profile.update(profile_params)
-    redirect_to dashboard_path
+    if profile.update(profile_params)
+      redirect_to dashboard_path
+    else
+      flash[:alert] = profile.errors.full_messages.join(". ")
+      redirect_to edit_profile_path(current_user.profile)
+    end
   end
 
   def create
