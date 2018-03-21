@@ -5,27 +5,23 @@
       </div>
     </div>
   </div>
-
 <section id="tabs">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-
         <ul class="nav nav-tabs nav-fill profile-nav" id="nav-tab" role="tablist">
           <li class="active"><a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a></li>
           <li><a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Matches</a></li>
           <li><a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Questions</a></li>
         </ul>
-
         <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-
           <div class="tab-pane active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <%= render "pages/dashboard/profile_tab_pane" %>
           </div>
-
           <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 
-                       <% @matches.each do |m|  %>
+
+                    <% @matches.each do |m|  %>
                       <div class="match-box">
 
                         <div class="profile-roww">
@@ -43,18 +39,14 @@
                             <%= link_to match_path(m) do %>
                             <div class="chat-bubble-match">
                               <%= m.last_message %>
-                              <% end %>
-                            </div>
-                          </div>
-                        <% end %>
-
-                      </div>
-
+                            <% end %>
+                    </div>
+               </div>
+               </div>
+            <% end %>
+          </div>
 
           <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab"> There are currently no questions to view. </div>
-
-        </div>
-
       </div>
     </div>
   </div>
