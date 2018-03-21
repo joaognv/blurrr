@@ -4,7 +4,7 @@ function blur() {
     let unblur = Math.round(bubbles.length);
             console.log(unblur)
             // console.log(bubbles)
-      if (unblur > 7) {
+      if (unblur > 5) {
         unblur = 5;
       }
     let avatar = document.querySelector('.avatar');
