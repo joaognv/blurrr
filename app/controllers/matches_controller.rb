@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
     # 1.b apply the filtering rules :
     #.     - same city ?
     #.     - gender matches current user's pref' ?
-    other_users = User.where.not(id: current_user.id).select {|u| (u.profile.city == current_user.city) &&  (u.profile.gender == current_user.preference)}
+    other_users = User.where.not(id: current_user.id).select {|u| (u.profile&.city == current_user.profile&.city) &&  (u.profile&.gender == current_user.profile&.preference)}
     matches = []
     other_users.each do |ou|
       # 1.c check if the match already exists
