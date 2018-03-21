@@ -5,6 +5,6 @@ class Profile < ApplicationRecord
   validates :city, presence: true
   validates :age, presence: true
   validates :gender, presence: true, inclusion: { in: ["Female", "Male"] }
-  validates :preference, inclusion: { in: ["Men", "Women"] }
+  validates :preference, inclusion: { in: ["Male", "Female"] }
 
 end
