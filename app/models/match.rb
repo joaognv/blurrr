@@ -4,6 +4,6 @@ class Match < ApplicationRecord
   has_many :messages
 
   def last_message
-    self.messages.last.message
+    self.messages.last&.message
   end
 end

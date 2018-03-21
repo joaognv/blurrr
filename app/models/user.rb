@@ -9,6 +9,11 @@ class User < ApplicationRecord
   has_many :matches, through: :user_matches
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+ # before_save :capitalise_city
+      # this is good but for some reason not working
+ # def capitalise_city
+ #   city.capitalize!
+ # end
 
   def my_match_with(other_user)
     self.matches.map {|a| a if a.users.include?(other_user)}.first
