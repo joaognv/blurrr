@@ -1,5 +1,3 @@
-
-
 <div class="navbar-wagon">
 
   <!-- Logo -->
@@ -46,38 +44,36 @@
 
   <div class="navbar-wagon-item hidden-md hidden-lg">
 
-    <% if user_signed_in? %>
-      <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+  <% if user_signed_in? %>
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
 
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li>
-            <%= link_to dashboard_path do %>
-              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-question-circle-o"></i> <%= t(".questions", default: "Questions") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-commenting-o"></i> <%= t(".messages", default: "Messages") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    <% else %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+           <div>
+        <%= image_tag "cancel.png", class: "dropdown-cancel" %>
+           <li> <%= link_to dashboard_path do %>
+                Profile
+              <% end %></li>
+                <%= image_tag "Line.png", class: "dropdown-line" %>
+                <li> <%= link_to dashboard_path do %>
+                Matches
+                <% end %>
+                </li>
+                <%= image_tag "Line.png", class: "dropdown-line" %>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                  <%= t(".sign_out", default: "Log out") %>
+                  <% end %>
+                </li>
+                <br>
+                <div><%= image_tag "dropdown_nav_logo.png", class: "nav-logo" %></div>
+              </ul>
+              </div>
+            </div>
+        <% else %>
+          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <% end %>
 
   </div>
-
 </div>
 
