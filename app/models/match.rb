@@ -6,4 +6,10 @@ class Match < ApplicationRecord
   def last_message
     self.messages.last.message
   end
+
+  def calc_blur
+    message_count = self.messages.length
+    message_count = 5 if message_count > 5
+    "#{5 - message_count}px"
+  end
 end
