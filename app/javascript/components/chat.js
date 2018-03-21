@@ -1,5 +1,4 @@
 function initChat(){
-
   const submit = document.querySelector('.chat-send');
 
    // scroll to bottom of chatBubbles div
@@ -58,7 +57,9 @@ function initChat(){
         document.querySelector('.chat-bubbles').innerHTML = "";
         // 1. clear the messages list :
         //    .innerHTML = ""  or $(".whatver").html("");
-        // 2. iterate over each message
+        // 2. iterate
+
+         // over each message
         messages.forEach(function(message) {
           // message is a hash
           const messageUserId = message.user_id;
@@ -81,7 +82,7 @@ function initChat(){
         });
 
         // 3. insert the HTML for each message
-        console.log(messages);
+
       });
     }
   setInterval( refreshPage, 5000);
