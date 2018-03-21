@@ -27,7 +27,7 @@ class ProfilesController < ApplicationController
     @profile.user = current_user
     if @profile.save
 
-      redirect_to question_path(Question.first)
+      redirect_to question_path(Question.all.first)
     else
       flash[:alert] = @profile.errors.full_messages
       render new_profile_path
