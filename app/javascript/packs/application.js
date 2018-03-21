@@ -8,6 +8,7 @@ import { submitQuestion } from "../components/questions.js";
 if (document.getElementsByClassName("chat-page")[0]) {
   initChat();
   chatValidator();
+  blur();
 }
 if (document.getElementsByClassName("prof-new-form")[0]) {
   initSlider();
