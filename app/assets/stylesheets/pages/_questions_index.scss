@@ -1,4 +1,81 @@
-.form-box-full-width {
-  width: 50%;
-  margin: auto;
+
+
+.Qpage {
+  background-color: #FF2681;
+  color: whitesmoke;
+  height: 100%;
+  h1 {
+    margin-top: 80px;
+    text-align: center;
+    background-color: rgb(111, 10, 111);
+
+  }
 }
+
+.Qpage .form-box-full-width {
+  margin: auto;
+  margin-bottom: 500px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+
+}
+
+.title-border {
+  border-bottom: 4px solid whitesmoke;
+}
+
+.question-box {
+  border-top: 3px solid whitesmoke;
+  text-align: center;
+  background-color: rgb(111, 10, 111);
+}
+
+.answer-box {
+  background-color: rgb(240, 80, 240);
+  text-align: center;
+  height: 170px;
+  border-bottom: 4px solid whitesmoke;
+
+}
+
+.btn-questions {
+  background-color: rgb(111, 10, 111);
+  justify-content: center;
+   align-content: center;
+  border-radius: 10px;
+  height: 50px;
+  width: 80%;
+  border: none;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+
+.Calcpage {
+  display: flex;
+  background-color: #FF2681;
+  color: whitesmoke;
+  height: 100%;
+  justify-content: center;
+
+  h1 {
+
+    text-align: center;
+    background-color: rgb(111, 10, 111);
+
+  }
+}
+
+.fakeaf {
+  padding: 50px;
+  height: 650px;
+}
+
+
+
+
+
+
+

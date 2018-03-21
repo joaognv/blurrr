@@ -1,20 +1,22 @@
-<div class="container Qpage">
-
-<h1>Your questions</h1>
-
+<div class="Qpage">
 
   <div class="form-box-full-width">
-    <%= @question.question %>
+  <h1 class="title-border">Personality Calculator</h1>
 
-    <% @question.answers.each do |ans| %>
-      <%= link_to ans.answer, user_answers_path(picked_answer_id: ans.id), method: :post, class: "btn btn-primary" %>
-    <% end %>
+    <div class="question-box">
+   <h4> <%= @question.question %> </h4>
+    </div>
+
+     <div class="answer-box">
+        <% @question.answers.each do |ans| %>
+         <div class="btn btn-questions"> <%= link_to ans.answer, user_answers_path(picked_answer_id: ans.id), method: :post %>
+          </div>
+        <% end %>
+     </div>
 
   </div>
 
 
-    <div class="button-signup">
-      <%= link_to "Find me a Match", new_match_path %>
-    </div>
 
+ </div>
 </div>
