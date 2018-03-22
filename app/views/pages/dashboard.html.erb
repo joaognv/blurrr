@@ -50,27 +50,31 @@
           <% end %>
           id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
             <% @matches.each do |m|  %>
-              <div class="match-box">
-                <div class="profile-roww">
-                  <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
-                     <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs avatar-wrapper-block">
-                       <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> );" >
-                       </div>
-                     </div>
-                  <% end %>
-               </div>
-               <%= link_to match_path(m) do %>
-               <div class="bubbble-right chat-bubble-match">
+                       <div class="avatar_name"><%= m.users.where.not(id: current_user.id).first.profile.username %></div>
+                      <div class="match-box">
+                          <div class="profile-roww">
+                              <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
 
-                   <div class="chat-bubble-match">
-                     <%= m.last_message %>
+                              <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs avatar-wrapper-block">
+
+                                <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> ); filter: blur(<%= m.calc_blur %>);" >
+                                </div>
+                              </div>
+                              <% end %>
+                        </div>
+
+                        <div class="bubbble-right chat-bubble-match">
+                            <%= link_to match_path(m) do %>
+                            <div class="chat-bubble-match">
+                              <%= m.last_message %>
+                            <% end %>
+                            <div class="needs_to_be_rendered" datetime=" <%= m.messages[0] ? m.messages.last.created_at : 'No messages' %>"></div>
                     </div>
-                                      <% end %>
-
                </div>
                </div>
             <% end %>
           </div>
+
           <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab"> There are currently no questions to view. </div>
       </div>
     </div>
