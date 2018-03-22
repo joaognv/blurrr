@@ -13,19 +13,12 @@
 
 .Calcbox {
   margin-top: 70px;
-
 }
-
-
 
 .calctophalf {
  height: 45%;
  width: 100vw;
-
-
-
 }
-
 
 .calcbttmhalf {
   height: 55%;
@@ -34,9 +27,9 @@
 
 .imagee-sizee {
     max-height: 200px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
-
-
 
 // jss
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
@@ -58,7 +51,6 @@ body {
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   font-family: Roboto;
 }
 
@@ -131,7 +123,7 @@ body {
 .curtain {
 
   position: absolute;
-  height: 30%;
+  height: 40%;
   width: 50%;
   -webkit-transition: all 3s ease-out 0s;
   -ms-transition: all 3s ease-out 0s;
