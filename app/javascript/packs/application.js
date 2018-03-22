@@ -1,4 +1,7 @@
 import "bootstrap";
+import "../components/calc.js"
+import "../components/curt.js"
+import "../components/hide.js"
 import { initChat } from "../components/chat.js";
 import { chatValidator} from "../components/chatValidator.js";
 import { blur } from "../components/blur.js";
