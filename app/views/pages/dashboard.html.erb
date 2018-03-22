@@ -63,14 +63,14 @@
                               <% end %>
                         </div>
 
+                        <%= link_to match_path(m) do %>
                         <div class="bubbble-right chat-bubble-match">
-                            <%= link_to match_path(m) do %>
-                            <div class="chat-bubble-match">
+                          <div class="chat-bubble-match">
                               <%= m.last_message %>
-                            <% end %>
                             <div class="needs_to_be_rendered" datetime=" <%= m.messages[0] ? m.messages.last.created_at : 'No messages' %>"></div>
-                    </div>
-               </div>
+                          </div>
+                        </div>
+                        <% end %>
                </div>
             <% end %>
           </div>

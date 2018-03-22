@@ -23,7 +23,6 @@ profile1 = Profile.create(user: user1, username: "Jason", city: "Los Angeles", a
 user2 = User.create(email:"user2@gmail.com", password: "123456", password_confirmation: "123456")
 profile2 = Profile.create(user: user2, username: "Sally", city: "Los Angeles", age: 35, preference: "Male", gender:"Female", chakra_colour: "blue", remote_photo_url: "https://i.imgur.com/szePHzO.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
 
-
 user3 = User.create!(email:"user3@gmail.com", password: "123456", password_confirmation: "123456")
 
 user4 = User.create!(email:"user4@gmail.com", password: "123456", password_confirmation: "123456")
