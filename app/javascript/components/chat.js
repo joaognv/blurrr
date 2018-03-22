@@ -1,3 +1,15 @@
+import timeago from 'timeago.js'
+
+function initializeTimeago() {
+  const timeagoInstance = timeago();
+  const nodes = document.querySelectorAll('.needs_to_be_rendered');
+  // use render method to render nodes in real time
+  timeagoInstance.render(nodes, 'en');
+}
+
+initializeTimeago();
+
+
 function initChat(){
   const submit = document.querySelector('.chat-send');
 
@@ -16,7 +28,7 @@ function initChat(){
     const chatInput = document.querySelector('.chat-input');
 
     // append a new message to the list
-    chatBubbles.insertAdjacentHTML('beforeend', `<div class="bubble-right"><div class="chat-bubble"><p>${chatInput.value}</p></div></div>`);
+    chatBubbles.insertAdjacentHTML('beforeend', `<div class="bubble-right"><div class="chat-bubble"><p>${chatInput.value}</p></div><div class="needs_to_be_rendered" datetime="${Date.new}"></div></div>`);
 
     // prepare the data to send before clearing the input
     const data = {
@@ -73,13 +85,15 @@ function initChat(){
 
           chatBubbles.insertAdjacentHTML(
             'beforeend',
-            `<div class="bubble-${messagePosition}"><div class="chat-bubble"><p>${message.message}</p></div></div>`
+            `<div class="bubble-${messagePosition}"><div class="chat-bubble"><p>${message.message}</p><div class="needs_to_be_rendered" datetime="${message.created_at}"></div></div>`
           );
 
           // if userId is current_user
           // then bubble-right
           // else bubble-left
         });
+
+        initializeTimeago();
 
         // 3. insert the HTML for each message
 
