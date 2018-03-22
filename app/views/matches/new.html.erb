@@ -6,43 +6,42 @@
           <div class="loading-page">
             <div class="counter">
               <h2>Calculating</h2>
-              <h1>0% </h1>
+              <h1>0%</h1>
             <hr/>
             </div>
           </div>
         </div>
 
-
-
-
-
       <div class="calcbttmhalf" id="div11">
 
-          <div class="curtain -left"></div>
+          <div class="lefthalf">
 
-             <span class="imagee-sizee"> <%= image_tag "Showman.png", class: "imagee-sizee" %> </span>
+         <span class="imagee-sizee"> <%= image_tag "Showman.png", class: "imagee-sizee" %> </span>
+          <div class="curtain -left">
+          </div>
+          </div>
 
-          <div class="curtain -right"></div>
+
+           <div class="righthalf">
+
+              <h5 class="righthalf-Ymatch">You have a match!</h5>
+              <%= link_to profile_path(@match.users.where.not(id: current_user.id).first.profile) do %>
+                <div class="avatar avatar-sm avatar-reveal" style="background-image: url(<%= @match.users.where.not(id: current_user.id).first.profile.photo.url ? @match.users.where.not(id: current_user.id).first.profile.photo.url  : 'http://dl1.cbsistatic.com/i/2017/10/19/925f2651-018c-4d76-baf2-3ce4de2ecdb4/a9d0a0ebc85b66e01318f74b0be11da8/imgingest-7427792717055670780.png';  %> );" >
+                </div>
+              <% end %>
+
+              <div class="curtain -right">
+
+              </div>
+         </div>
+
 
 
 
           <h5 class="open">View your Match</h5>
 
 
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
-
 
      </div>
 </div>

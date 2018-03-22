@@ -1,4 +1,5 @@
 
+
 .Calcpage {
   display: flex;
   background-color: #FF2681;
@@ -9,7 +10,7 @@
 
     text-align: center;
   }
-}
+
 
 .Calcbox {
   margin-top: 70px;
@@ -21,38 +22,66 @@
 }
 
 .calcbttmhalf {
-  height: 55%;
+  height: 45%;
   width:100vw;
+  display: flex;
+  flex-direction: row;
 }
 
 .imagee-sizee {
     max-height: 200px;
     margin-top: 30px;
     margin-left: 20px;
+    position: absolute;
+}
+
+
+.lefthalf {
+  width: 50%;
+      overflow:hidden;
+  position: relative;
+}
+
+.righthalf {
+  position: relative;
+    width: 50%;
+    display: flex;
+    overflow:hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 84px;
+    padding-right: 60px;
+
+}
+
+.righthalf-Ymatch {
+  margin-top: 30px;
+  text-align: center;
 }
 
 // jss
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
 }
 
-h1, p, h2, h3, h4, ul, li, div {
-  margin: 0;
-  padding: 0;
-}
+// h1, p, h2, h3, h4, ul, li, div {
+//   margin: 0;
+//   padding: 0;
+// }
 
-body {
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  font-family: Roboto;
-}
+// body {
+//   padding: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+
+// }
 
 .loading-page {
 
@@ -73,7 +102,7 @@ body {
 }
 .loading-page .counter h2 {
   font-size: 40px;
-  font-weight: 100;
+
   color: whitesmoke;
 }
 .loading-page .counter h1 {
@@ -105,7 +134,6 @@ body {
 //----------
 
 
-
 .open {
   position: fixed;
   margin: auto;
@@ -114,17 +142,17 @@ body {
   color: #fff;
   right: 0;
   bottom: 0;
-  font-family: arial,sans-serfi;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
 }
 
 .curtain {
-
   position: absolute;
-  height: 40%;
-  width: 50%;
+  top:0px;
+  right:0px;
+  left: 0px;
+  bottom:0px;
   -webkit-transition: all 3s ease-out 0s;
   -ms-transition: all 3s ease-out 0s;
   transition: all 3s ease-out 0s;
@@ -133,6 +161,7 @@ body {
   transform: rotate(0deg);
 }
 .curtain.-left {
+    width: 100%;
   left: 0px;
   background: -moz-linear-gradient(right, rgba(0, 0, 0, 0), #662289, #7731a3, #662289), -moz-linear-gradient(right, #7630a1, #3f1958, #7630a1);
   background: -o-linear-gradient(right, rgba(0, 0, 0, 0), #662289, #7731a3, #662289), -o-linear-gradient(right, #7630a1, #3f1958, #7630a1);
@@ -142,6 +171,7 @@ body {
 }
 .curtain.-right {
   right: 0px;
+  width: 100%;
   background: -moz-linear-gradient(right, rgba(0, 0, 0, 0), #662289, #7731a3, #662289), -moz-linear-gradient(right, #7630a1, #3f1958, #7630a1);
   background: -o-linear-gradient(right, rgba(0, 0, 0, 0), #662289, #7731a3, #662289), -o-linear-gradient(right, #7630a1, #3f1958, #7630a1);
   background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), #662289, #7731a3, #662289), -webkit-linear-gradient(right, #7630a1, #3f1958, #7630a1);
@@ -149,24 +179,21 @@ body {
   background-size: 17% 17%, 14% 14%;
 }
 .open-curtains .curtain.-left {
-  left: -16%;
-  width: 10%;
+    right: -115%;
+    left: -25%;
+    width: 10%;
   -webkit-transform: rotate(7deg);
   -ms-transform: rotate(7deg);
   transform: rotate(7deg);
 }
 .open-curtains .curtain.-right {
-  right: -16%;
+    left: 115%;
   width: 10%;
   -webkit-transform: rotate(-7deg);
   -ms-transform: rotate(-7deg);
   transform: rotate(-7deg);
 }
-
-
-
-
-
+}
 
 
 
