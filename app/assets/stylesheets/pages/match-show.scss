@@ -1,6 +1,6 @@
 .avatar_name {
-  font-family: montserrat;
-  color:grey;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
   margin-top: 20px;
   margin-left: 28px;
   margin-bottom: 0px;
@@ -55,6 +55,7 @@
   }
   .chat-send {
     width: 20%;
+    min-width: 70px;
   }
 }
 .chat-bubbles {
@@ -82,6 +83,10 @@
    padding:15px;
    color: white;
    width: 220px;
+}
+
+.chat-bubble-match {
+  font-size: 16px;
 }
 
 .bubble-left {
