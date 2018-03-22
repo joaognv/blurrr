@@ -51,11 +51,11 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
            <div>
         <%= image_tag "cancel.png", class: "dropdown-cancel" %>
-           <li> <%= link_to dashboard_path do %>
+           <li> <%= link_to dashboard_path(:keyword => 'profile')  do %>
                 Profile
               <% end %></li>
                 <%= image_tag "Line.png", class: "dropdown-line" %>
-                <li> <%= link_to dashboard_path do %>
+                <li> <%= link_to dashboard_path(:keyword => 'matches') do %>
                 Matches
                 <% end %>
                 </li>
@@ -66,14 +66,15 @@
                   <% end %>
                 </li>
                 <br>
-                <div><%= image_tag "dropdown_nav_logo.png", class: "nav-logo" %></div>
-              </ul>
+                <div><%= image_tag "dropdown_nav_logo.png", class: "nav-logo" %>
+                </div>
+        </ul>
               </div>
             </div>
         <% else %>
           <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
         <% end %>
 
-  </div>
+    </div>
 </div>
 

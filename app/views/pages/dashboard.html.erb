@@ -10,15 +10,45 @@
     <div class="row">
       <div class="col-xs-12">
         <ul class="nav nav-tabs nav-fill profile-nav" id="nav-tab" role="tablist">
-          <li class="active"><a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a></li>
-          <li><a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Matches</a></li>
+          <li
+          <% if params[:keyword] == "profile" %>
+            class='active'
+          <% end %>>
+           <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
+           <% if params[:keyword] == "profile" %>
+           aria-selected="true"
+          <% end %>>
+           Profile</a>
+         </li>
+           <li
+          <% if params[:keyword] == "matches" %>
+            class='active'
+          <% end %>>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+          <% if params[:keyword] == "matches" %>
+           aria-selected="true"
+          <% end %>>
+        Matches</a>
+         </li>
           <li><a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Questions</a></li>
         </ul>
         <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-          <div class="tab-pane active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div
+          <% if params[:keyword] == "profile" %>
+            class="tab-pane active"
+          <% else %>
+             class="tab-pane fade"
+          <% end %>
+          id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <%= render "pages/dashboard/profile_tab_pane" %>
           </div>
-          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <div
+          <% if params[:keyword] == "matches" %>
+            class="tab-pane active"
+          <% else %>
+             class="tab-pane fade"
+          <% end %>
+          id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
             <% @matches.each do |m|  %>
               <div class="match-box">
                 <div class="profile-roww">
