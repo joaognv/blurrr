@@ -4,7 +4,7 @@
  <div class="devise-form">
           <%= simple_form_for(@profile) do |p| %>
             <%= p.input :username, placeholder: "Name" %>
-            <%= p.input :age, placeholder: "Age" %>
+            <%= p.input :age, placeholder: "Age", input_html: { min: '0' } %>
             <%= p.input :city, placeholder: "City" %>
             <%= p.input :gender, collection: ["Male", "Female"], prompt: "Gender" %>
             <%= p.input :preference,  collection: ["Male", "Female"], prompt: "Looking for..." %>
@@ -35,7 +35,7 @@
             </div>
             <%= p.input :photo %>
             <%= p.input :photo_cache, as: :hidden %>
-            <%= p.button :submit, class:"brand-button" %>
+            <%= p.button :submit, 'Next step', class:"brand-button"  %>
           <% end %>
 
         </div>

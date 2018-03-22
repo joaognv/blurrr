@@ -62,26 +62,14 @@
 
 // jss
 
+
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-// h1, p, h2, h3, h4, ul, li, div {
-//   margin: 0;
-//   padding: 0;
-// }
-
-// body {
-//   padding: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-
-// }
 
 .loading-page {
 
@@ -131,9 +119,6 @@
 }
 
 
-//----------
-
-
 .open {
   position: fixed;
   margin: auto;
@@ -146,6 +131,7 @@
   text-align: center;
   line-height: 1;
 }
+
 
 .curtain {
   position: absolute;
