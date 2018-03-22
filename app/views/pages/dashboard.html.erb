@@ -22,24 +22,25 @@
 
 
                     <% @matches.each do |m|  %>
+                       <div class="avatar_name"><%= m.users.where.not(id: current_user.id).first.profile.username %></div>
                       <div class="match-box">
+                          <div class="profile-roww">
+                              <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
 
-                        <div class="profile-roww">
-                            <%= link_to profile_path(m.users.where.not(id: current_user.id).first.profile) do %>
+                              <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs avatar-wrapper-block">
 
-                            <div class="avatar-sharp-wrapper avatar-sharp-wrapper-xs avatar-wrapper-block">
-                              <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> ); filter: blur(<%= m.calc_blur %>);" >
+                                <div class="avatar avatar-xs" style="background-image: url(<%= m.users.where.not(id: current_user.id).first.profile.photo.url  %> ); filter: blur(<%= m.calc_blur %>);" >
+                                </div>
                               </div>
-                            </div>
-                            <% end %>
+                              <% end %>
                         </div>
 
-
-                          <div class="bubbble-right chat-bubble-match">
+                        <div class="bubbble-right chat-bubble-match">
                             <%= link_to match_path(m) do %>
                             <div class="chat-bubble-match">
                               <%= m.last_message %>
                             <% end %>
+                            <div class="needs_to_be_rendered" datetime=" <%= m.messages.last.created_at %>"></div>
                     </div>
                </div>
                </div>

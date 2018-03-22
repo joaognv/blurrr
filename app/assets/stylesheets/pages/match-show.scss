@@ -1,3 +1,12 @@
+.avatar_name {
+  font-family: montserrat;
+  color:grey;
+  margin-top: 20px;
+  margin-left: 28px;
+  margin-bottom: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
 .reciever-namee {
   position: absolute;
   justify-self: center;
@@ -83,5 +92,12 @@
    border-radius: 10px;
    background: lightgrey;
    padding:15px;
+}
+
+.needs_to_be_rendered {
+  font-size: 10px;
+  text-align: right;
+
+
 }
 
