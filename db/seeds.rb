@@ -15,12 +15,14 @@ UserAnswer.delete_all
 UserMatch.delete_all
 
 user1 = User.create(email:"user1@gmail.com", password: "123456", password_confirmation: "123456")
+profile1 = Profile.create(user: user1, username: "Jason", city: "Los Angeles", age: 22, preference: "Female", gender:"Male", chakra_colour: "orange", remote_photo_url: "https://i.imgur.com/0Ro4Lyp.jpg" , nerdy: 10, sporty: 2, party: 50, organized: 70, spiritual: 100)
+
 
 user2 = User.create(email:"user2@gmail.com", password: "123456", password_confirmation: "123456")
+profile2 = Profile.create(user: user2, username: "Sally", city: "Los Angeles", age: 35, preference: "Male", gender:"Female", chakra_colour: "blue", remote_photo_url: "https://i.imgur.com/szePHzO.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
 
 
-profile1 = Profile.create(user: user1, username: "Jason", city: "Los Angeles", age: 22, preference: "Women", gender:"Male", chakra_colour: "orange", remote_photo_url: "https://i.imgur.com/0Ro4Lyp.jpg" , nerdy: 10, sporty: 2, party: 50, organized: 70, spiritual: 100)
-profile2 = Profile.create(user: user2, username: "Sally", city: "Compton", age: 35, preference: "Men", gender:"Female", chakra_colour: "blue", remote_photo_url: "https://i.imgur.com/szePHzO.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
+
 
 mutch = Match.create(active: true)
 

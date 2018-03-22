@@ -1,9 +1,9 @@
 $(document).ready(function() {
   $(".open").click(function() {
-    if ($("body").hasClass("open-curtains")) {
-      $("body").removeClass("open-curtains");
+    if ($(".Calcbox").hasClass("open-curtains")) {
+      $(".Calcbox").removeClass("open-curtains");
     } else {
-      $("body").addClass("open-curtains");
+      $(".Calcbox").addClass("open-curtains");
     }
   });
 });

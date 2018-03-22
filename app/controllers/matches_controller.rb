@@ -8,6 +8,7 @@ class MatchesController < ApplicationController
     #.     - gender matches current user's pref' ?
     other_users = User.where.not(id: current_user.id).select {|u| (u.profile&.city == current_user.profile&.city) &&  (u.profile&.gender == current_user.profile&.preference)}
     matches = []
+
     other_users.each do |ou|
       # 1.c check if the match already exists
       #.    - go through all current_user's matches
@@ -26,7 +27,7 @@ class MatchesController < ApplicationController
         matches << new_match
       end
 
-      @match = matches.last
+      @match = matches.last || true
     end
 
 
