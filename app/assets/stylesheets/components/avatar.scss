@@ -17,7 +17,7 @@
 }
 
 .avatar-sharp-wrapper-xs {
-  left: calc(50% - 45px);
+  left: calc(50% - 30px);
 }
 
 .avatar {
@@ -81,6 +81,10 @@
 
 .avatar-wrapper-under-line {
   bottom: -90px;
+}
+
+.avatar-wrapper-under-chat-above {
+  bottom: 50px;
 }
 
 .avatar-wrapper-block {
