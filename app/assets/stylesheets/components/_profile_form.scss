@@ -29,6 +29,10 @@
   input {
     background-color: transparent;
     font-size: 14px;
+    color:white;
+  }
+  input::placeholder {
+    color:white;
   }
   .form-control {
     border: none;

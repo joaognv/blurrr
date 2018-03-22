@@ -16,6 +16,6 @@ class User < ApplicationRecord
  # end
 
   def my_match_with(other_user)
-    self.matches.map {|a| a if a.users.include?(other_user)}.first
+    self.matches.select {|a| a if a.users.include?(other_user)}.first
   end
 end
