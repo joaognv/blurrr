@@ -16,28 +16,9 @@ UserAnswer.delete_all
 UserMatch.delete_all
 
 
-user1 = User.create(email:"user1@gmail.com", password: "123456", password_confirmation: "123456")
-profile1 = Profile.create(user: user1, username: "Jason", city: "Los Angeles", age: 22, preference: "Female", gender:"Male", chakra_colour: "orange", remote_photo_url: "https://i.imgur.com/0Ro4Lyp.jpg" , nerdy: 10, sporty: 2, party: 50, organized: 70, spiritual: 100)
-
-
 user2 = User.create(email:"user2@gmail.com", password: "123456", password_confirmation: "123456")
-profile2 = Profile.create(user: user2, username: "Sally", city: "Los Angeles", age: 35, preference: "Male", gender:"Female", chakra_colour: "blue", remote_photo_url: "https://i.imgur.com/szePHzO.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
 
-user3 = User.create!(email:"user3@gmail.com", password: "123456", password_confirmation: "123456")
-
-user4 = User.create!(email:"user4@gmail.com", password: "123456", password_confirmation: "123456")
-
-user5 = User.create!(email:"user5@gmail.com", password: "123456", password_confirmation: "123456")
-
-user6 = User.create!(email:"user6@gmail.com", password: "123456", password_confirmation: "123456")
-
-
-profile1 = Profile.create!(user: user1, username: "Jason", city: "Barcelona", age: 22, preference: "Female", gender:"Male", chakra_colour: "orange", remote_photo_url: "https://i.imgur.com/0Ro4Lyp.jpg" , nerdy: 10, sporty: 2, party: 50, organized: 70, spiritual: 100)
-profile2 = Profile.create!(user: user2, username: "Sally", city: "Barcelona", age: 35, preference: "Male", gender:"Female", chakra_colour: "blue", remote_photo_url: "https://i.imgur.com/szePHzO.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
-profile3 = Profile.create!(user: user3, username: "Bob", city: "Barcelona", age: 26, preference: "Female", gender:"Male", chakra_colour: "orange", remote_photo_url: "http://i.imgur.com/9FWjzJ4.png" , nerdy: 10, sporty: 2, party: 50, organized: 70, spiritual: 100)
-profile4 = Profile.create!(user: user4, username: "Brenda", city: "Barcelona", age: 31, preference: "Male", gender:"Female", chakra_colour: "blue", remote_photo_url: "https://i.pinimg.com/736x/f4/95/79/f49579eb114396353f007b08a76d86eb--ulzzang-couple-avatar.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
-profile5 = Profile.create!(user: user5, username: "Larry", city: "Barcelona", age: 40, preference: "Female", gender:"Male", chakra_colour: "orange", remote_photo_url: "http://i.imgur.com/gKwuolt.jpg" , nerdy: 10, sporty: 2, party: 50, organized: 70, spiritual: 100)
-profile6 = Profile.create!(user: user6, username: "Linda", city: "Barcelona", age: 23, preference: "Male", gender:"Female", chakra_colour: "blue", remote_photo_url: "http://i.imgur.com/rFYYhl5.jpg", nerdy: 10, sporty: 25, party: 40, organized: 75, spiritual: 90)
+profile2 = Profile.create!(user: user2, username: "Lola", city: "Barcelona", age: 25, preference: "Male", gender:"Female", chakra_colour: "blue", nerdy: 1, sporty: 8, party: 7, organized: 7, spiritual: 9)
 
 # mutch1 = Match.create(active: true)
 
@@ -53,12 +34,11 @@ profile6 = Profile.create!(user: user6, username: "Linda", city: "Barcelona", ag
 # message1 = Message.create!(user: user1, match: mutch, message: "Hey cowboy")
 # message2 = Message.create!(user: user2, match: mutch, message: "I think I've seen you before...")
 
-
-question1 = Question.create!(question: "Dessert Island..?")
+question1 = Question.create!(question: "Desert Island..?")
 question2 = Question.create!(question: "Stumble upon a polar bear..?")
 question3 = Question.create!(question: "Find a million Dollars..?")
-question4 = Question.create!(question: "Who?")
-question5 = Question.create!(question: "Some")
+question4 = Question.create!(question: "Perfect date?")
+question5 = Question.create!(question: "Pineapple pizza..")
 
 answer1 = Answer.create!(question: question1, answer: "Gun", colour: "BLUE")
 answer2 = Answer.create!(question: question1, answer: "Fishing Rod", colour: "RED")
@@ -69,12 +49,12 @@ answer4 = Answer.create!(question: question2, answer: "Act like a cub", colour: 
 answer5 = Answer.create!(question: question3, answer: "Happy Cry", colour: "GREEN")
 answer6 = Answer.create!(question: question3, answer: "Scared Cry", colour: "YELLOW")
 
-answer7 = Answer.create!(question: question4, answer: "Wonder Woman", colour: "GREEN")
-answer8 = Answer.create!(question: question4, answer: "Hilary Clinton", colour: "YELLOW")
+answer7 = Answer.create!(question: question4, answer: "Netflix & Chill", colour: "GREEN")
+answer8 = Answer.create!(question: question4, answer: "Drink & Dance", colour: "YELLOW")
 
-answer9 = Answer.create!(question: question5, answer: "Nuk", colour: "BLUE")
-answer10 = Answer.create!(question: question5, answer: "Nak", colour: "RED")
+answer9 = Answer.create!(question: question5, answer: "YEAHHHHH!", colour: "BLUE")
+answer10 = Answer.create!(question: question5, answer: "ABOMINATION!", colour: "RED")
 
-user1.answers << [answer1, answer3]
-user2.answers << [answer2, answer4, answer10]
+# user1.answers << [answer1, answer3]
+# user2.answers << [answer2, answer4, answer10]
 puts "Succesful seed my lord"
